@@ -17,7 +17,12 @@ class BookFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'id' => fake()->randomNumber(),
+            'isbn' => fake()->randomNumber(),
+            'title' => fake()->text(70),
+            'author' => fake()->name(),
+            'description' => fake()->text(250),
+            'date_published' => fake()->dateTime(),
         ];
     }
 }
